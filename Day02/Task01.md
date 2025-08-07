@@ -26,11 +26,37 @@
 
 ---
 
-#### **Task 4: Two-Way Data Binding (`ngModel`)**
+#### **Task 4a: Two-Way Data Binding (`ngModel`)**
 1. Add an input field for the user to enter their name.
    - Bind it to the `name` property using `[(ngModel)]`.
 2. Display a greeting below the input field that updates dynamically:
    - Example: **"Hello, [name]!**" or **"Hello, Guest!"** if the name field is empty.
+
+b
+**Requirements: Two-Way Binding Slider ↔ Number Input**
+
+1. **Component Name:** `SliderNumberBindingComponent`
+
+2. **Component Property:**
+
+   * Declare a `value: number = 50;` in the component class.
+
+3. **Template:**
+
+   * Add an `<input type="range">` with `min="0"`, `max="100"`, and `[(ngModel)]="value"`.
+   * Add an `<input type="number">` with `min="0"`, `max="100"`, and `[(ngModel)]="value"`.
+   * Below them, display the current value:
+
+     ```html
+     <p>Current value: {{ value }}</p>
+     ```
+
+4. **Behavior:**
+
+   * Moving the slider updates the number input instantly.
+   * Typing in the number input moves the slider position accordingly.
+   * The `<p>` text always shows the live `value`.
+
 
 ---
 
